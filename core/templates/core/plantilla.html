@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso Django</title>
+    
+    <title>{% block title %}   {% endblock %}| Mi Web Personal</title>
+
 </head>
 <body>
     <!-- CABEZERA Y MENU -->
-    <h1> Mi Primera web</h1>
+    <h1> Mi Web Personal</h1>
 
     <ul>
-        <li><a href="/">Portada</a></li>
-        <li><a href="/acerca_de/">Acerca de</a></li>
-        <li><a href="/contacto/">Contacto</a></li>
-        <li><a href="/portafolio/">Portafolio</a></li>
+        <li><a href="{% url 'home' %}">Portada</a></li>
+        <li><a href="{% url 'acerca_de' %}">Acerca de</a></li>
+        <li><a href="{% url 'contacto' %}">Contacto</a></li>
+        <li><a href="{% url 'portafolio' %}">Portafolio</a></li>
     </ul>
     <!-- CONTENIDO -->
     {%block content%}
@@ -22,6 +24,6 @@
 
 </body>
 <footer>
-    &copy; Pedro Macias -Copyright 2021 
+    <p> &copy; Pedro Macias -Copyright 2021 </p>
 </footer>
 </html>
