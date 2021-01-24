@@ -11,7 +11,7 @@ from django.shortcuts import HttpResponse
 def home(request):
     return render(request,'core/home.html')
 def acerca_de(request):
-    return render(request,'core/acerca_de.html')
+    return render(request,'core/acerca-de.html')
 def contacto(request):
     return render(request,'core/contacto.html')
 def portafolio(request):

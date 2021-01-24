@@ -7,9 +7,17 @@
     Portada
 {% endblock %}
 
+<!-- BLOQUE IMAGEN FONDO -->
+{% block ImagenFondo %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+
+<!-- BLOQUE CABECERA -->
+
+{% block Cabeceras %}
+<h1>Pedro Macías</h1>
+<span class="subheading">Estudiante Desarrollo Web </span>
+{% endblock %}
+
 <!-- CONTENIDO -->
 {% block content %}
-<h2>Portada</h2>
-<p>Esto es la portada</p>
 
 {% endblock %}

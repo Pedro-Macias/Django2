@@ -1,16 +1,33 @@
 <!-- IMPORTAMOS LA PLANTILLA -->
 {% extends 'core/plantilla.html' %}
 
+
 <!-- TITULO -->
 {% block title %}
     Contacto>
 {% endblock %}
+
+<!-- BLOQUE IMAGEN FONDO -->
+{% block ImagenFondo %}{% load static %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
+
+<!-- BLOQUE CABECERA -->
+
+{% block Cabeceras %}
+<h1>Contacto</h1>
+<span class="subheading">Practicas y Formación </span>
+{% endblock %}
+
 <!-- CONTENIDO -->
 {% block content %}
-<h2>Contacto</h2>
+<div class="row">
+    <div class="col-lg-8 col.md mx-auto">
+        <p>Estoy dispuesto a nuevos proyectos y podeis poneros en contacto 
+            conmigo , estando a la espera e nuevas propuestas
+        </p>
+        <br>
+        <p><b>Email:</b> <a href="mailto: prueba@gmail.com">prueba@gmail.com</a></p>
+    </div>
+</div>
 
-<p>Este es mi e-mail: 
-    <a href="mailto: prueba@gmail.com">prueba@gmail.com</a>
-</p>
 
 {% endblock %}

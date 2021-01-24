@@ -1,0 +1,45 @@
+
+<!-- IMPORTAMOS LA PLANTILLA -->
+{% extends 'core/plantilla.html' %}
+
+<!-- importamos archivos estaticos -->
+{% load static %}
+
+<!-- TITULO -->
+{% block title %}
+    Acerca de 
+{% endblock %}
+
+<!-- BLOQUE IMAGEN FONDO -->
+{% block ImagenFondo %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+
+<!-- BLOQUE CABECERA -->
+
+{% block Cabeceras %}
+<h1>Acerca de</h1>
+<span class="subheading">Biografía </span>
+{% endblock %}
+
+<!-- CONTENIDO -->
+{% block content %}
+<div class="row">
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" 
+        src="{% static 'core/img/avatar.jpg' %}" alt="">
+
+    </div>
+    <div class = "col-lg-7 col-md-8">
+        <h2 class="section-heading">Pedro Macías</h2>
+        <p> Nacido en Avilés , Desde 1998 director de la empresa Maveas Holiday Tours SL. <br>
+            Empresa dedicada a la comercialización de viajes (Aéreo, Coches de Alquiler, Hoteles
+            Paquetes turisticos ), Agencia especializada en el turisto Etnico. <br>
+            Mis dos grandes aficiones son : <br>
+            Las Motos , me gusta salir y hacer rutas con ella , 
+            para conocer lugares fantasticos y disfrutar de los amigos y la gastronomia
+            podeis ver algunas de mis rutas en mi blog  '<a href="https://www.mcveasmoto.com/">En ruta con McVeas</a>'<br>
+            Y desde hace 2 años , realizo cursos de programación , lo que se esta convirtiendo 
+            en mi gran otra pasión.</p>
+
+    </div>
+</div>
+{% endblock %}
