@@ -18,6 +18,7 @@ from django.urls import path
 ''' importamos del nucleo el fichero view'''
 from core import views
 
+from django.conf import settings
 urlpatterns = [
     path('', views.home, name='home'),
     path('acerca-de/', views.acerca_de, name='acerca-de'),
@@ -26,5 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-
-
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT)

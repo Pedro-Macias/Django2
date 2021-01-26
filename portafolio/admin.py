@@ -3,4 +3,7 @@ from django.contrib import admin
 from .models import Proyecto
 # Register your models here.
 
-admin.site.register(Proyecto)
+class ProyectoAdmin(admin.ModelAdmin):
+    readonly_fields = ('creado', 'actualizado')
+
+admin.site.register(Proyecto, ProyectoAdmin)
