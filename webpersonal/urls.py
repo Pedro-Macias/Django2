@@ -16,14 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 ''' importamos del nucleo el fichero view'''
-from core import views
+from core import views as core_views
+from portafolio import views as portafolio_views
 
 from django.conf import settings
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('acerca-de/', views.acerca_de, name='acerca-de'),
-    path('contacto/', views.contacto, name='contacto'),
-    path('portafolio/', views.portafolio, name='portafolio'),
+    path('', core_views.home, name='home'),
+    path('acerca-de/',core_views.acerca_de, name='acerca-de'),
+    path('contacto/', core_views.contacto, name='contacto'),
+    path('portafolio/', portafolio_views.portafolio, name='portafolio'),
     path('admin/', admin.site.urls),
 ]
 

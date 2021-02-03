@@ -1,0 +1,47 @@
+<!-- IMPORTAMOS LA PLANTILLA -->
+{% extends 'core/plantilla.html' %}
+<!-- importamos archivos estaticos -->
+{% load static %}
+
+<!-- TITULO -->
+{% block title %}
+    Portafolio
+{% endblock %}
+<!-- BLOQUE IMAGEN FONDO -->
+{% block ImagenFondo %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+
+<!-- BLOQUE CABECERA -->
+
+{% block Cabeceras %}
+<h1>Portafolio</h1>
+<span class="subheading">Curículo - Cursos y proyectos </span>
+{% endblock %}
+
+<!-- CONTENIDO -->
+{% block content %}
+
+    {% for proyecto in proyectos%}
+
+    <!-- proyecto -->
+    <div class="row project">
+        <div class="col-lg-3 col-md-4 offset-lg1">
+            <img class="img-fluid" 
+            src="{{proyecto.imagen.url}}" alt="">
+        </div>
+        <div class= "col-lg-7 col-md-8">
+            <h2 class= "section-heading title">{{proyecto.titulo}}</h2>
+            <p> {{proyecto.descripcion}}</p>
+            
+            <!-- comprobar si existe el enlace-->
+            {% if proyecto.enlace %} 
+                <p><a href="{{proyecto.enlace}}">Más informacion en la pagina del blog</a></p>
+            {% endif %}
+        </div>
+        
+    </div>
+    {% endfor%}
+
+
+
+
+{% endblock %}

@@ -14,5 +14,3 @@ def acerca_de(request):
     return render(request,'core/acerca-de.html')
 def contacto(request):
     return render(request,'core/contacto.html')
-def portafolio(request):
-    return render(request,'core/portafolio.html')
